@@ -24,11 +24,11 @@ public class PdfSign {
         // Create a rectangle for signature location
         java.awt.Rectangle rect = new java.awt.Rectangle(10, 10, 200, 50);
         // Set signature appearance
-        pdfSign.setSignatureAppearance("ignou_logo.png");
+//        pdfSign.setSignatureAppearance("ignou_logo.png");
 
         // Create any of the three signature types
 //        PKCS1 signature = new PKCS1("cert/crubn.pfx", "1234"); // PKCS#1
-          PKCS1 signature = new PKCS1("cert/ignou.pfx", "dsc@123"); // PKCS#1
+          PKCS1 signature = new PKCS1("self-signed.pfx", "12345678"); // PKCS#1
 
         pdfSign.sign(1, "I'm document author", "vbnegi@ignou.ac.in", "New Delhi", true, rect,
                 signature);
